@@ -263,40 +263,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- GPG -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven-gpg-plugin.version}</version>
-						<configuration>
-							<useAgent>false</useAgent>
-						</configuration>
-                        <executions>
-                            <execution>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-					<!-- maven central -->
-					<plugin>
-						<groupId>org.sonatype.central</groupId>
-						<artifactId>central-publishing-maven-plugin</artifactId>
-						<version>${central-publishing-maven-plugin.version}</version>
-						<extensions>true</extensions>
-						<configuration>
-							<publishingServerId>central</publishingServerId>
-							<excludeArtifacts>
-								<artifact>xxl-job-admin</artifact>
-								<artifact>xxl-job-executor-samples</artifact>
-								<artifact>xxl-job-executor-sample-frameless</artifact>
-								<artifact>xxl-job-executor-sample-springboot</artifact>
-								<artifact>xxl-job-executor-sample-springboot-ai</artifact>
-							</excludeArtifacts>
-						</configuration>
-					</plugin>
 				</plugins>
 			</build>
 		</profile>
